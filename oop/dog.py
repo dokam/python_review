@@ -12,7 +12,7 @@ class Dog:
 
     # Another instance method
     def speak(self, sound):
-        return f"{self.name} says {sound}"
+        return f"{self.name} barks {sound}"
 
 
 a = Dog("Jack", 3)
@@ -20,3 +20,24 @@ print(a)
 print(a.speak("auauauuaa"))
 
 print(a.species)
+
+
+class JackRussellTerrier(Dog):
+    def speak(self, sound="Arf"):
+        return super().speak(sound)
+
+
+class Dachshund(Dog):
+    pass
+
+
+class Bulldog(Dog):
+    pass
+
+
+miles = JackRussellTerrier("Miles", 4)
+print(miles)
+print(miles.speak())
+print(miles.speak("Grrr"))
+print(type(miles))
+print(isinstance(miles, Dog))
