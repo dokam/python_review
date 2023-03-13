@@ -22,6 +22,10 @@ print(a.speak("auauauuaa"))
 print(a.species)
 
 
+# class JackRussellTerrier(Dog):
+#     def speak(self, sound="Arf"):
+#         return f"{self.name} says {sound}"
+
 class JackRussellTerrier(Dog):
     def speak(self, sound="Arf"):
         return super().speak(sound)
@@ -39,5 +43,6 @@ miles = JackRussellTerrier("Miles", 4)
 print(miles)
 print(miles.speak())
 print(miles.speak("Grrr"))
+print("-------------------")
 print(type(miles))
 print(isinstance(miles, Dog))
